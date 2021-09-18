@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>whisper客服</title>
+    <link rel="stylesheet" href="/static/service/js/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/customer/css/whisper-cli.css">
+</head>
+<body class="layui-layout-body" style="background: #f2f2f2">
+<div class="layui-layout layui-layout-admin" style="width: 100%;margin: 0 auto;">
+    <div class="layui-header" style="background: #01AAED;margin-top: 0;height: 40px">
+        <div class="layui-logo" style="line-height: 40px">
+            <a target="_blank" href="http://whisper.baiyf.com" style="color: white" id="title">与 客服 交流中</a>
+        </div>
+    </div>
+
+    <div class="layui-body whisper-chat-area" style="top:19px;width: 100%;height: 90%">
+        <div class="chat-left" style="width: 100%">
+            <div class="chat-box whisper-chat-main">
+                <ul id="chat-list" style="display: block">
+
+                </ul>
+            </div>
+            <div class="msg-send">
+                <div class="tools-bar">
+                    <i class="layui-icon" style="font-size: 30px;" id="face" title="表情">&#xe60c;</i>
+                    <i class="layui-icon" style="font-size: 30px;" id="image" title="图片">&#xe60d;</i>
+                    <i class="layui-icon" style="font-size: 30px;" id="praise" title="点赞">&#xe6c6;</i>
+                    <span style="float: right;cursor: pointer" id="cut">怎么发截图？</span>
+                </div>
+                <div class="msg-box">
+                    <textarea class="msg-area" id="msg"></textarea>
+                </div>
+                <div class="send-area">
+                    <button class="layui-btn layui-btn-small send" id="send">
+                        <i class="layui-icon">&#xe609;</i>发送
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="praise-box" id="appraise">
+        <p>给客服评价： </p>
+        <div id="star"></div><br/>
+        <button class="layui-btn layui-btn-xs" style="float: right;background: #01AAED" id="do-praise">确定</button>
+    </div>
+</div>
+
+<script src="/static/service/js/jquery-1.9.0.min.js"></script>
+
+<script>
+    var config = {
+        uid: '{$id}',
+        name: '{$name}',
+        avatar: '{$avatar}',
+        group: '{$group}',
+        socket: '{$socket}'
+    };
+</script>
+<script src="/static/service/js/layui/layui.js"></script>
+<script src="/static/service/js/functions.js"></script>
+<script src="/static/customer/js/whisper-cli.js"></script>
+</body>
+</html>
